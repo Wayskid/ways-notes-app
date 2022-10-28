@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    list-style: none;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1b263b;
+}
+
+#root{
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+}
+
+.containerBody{
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .aside{
+    background-color: #7a0511;
+    border-radius: 5px;
+    padding: 1rem 0rem;
+    display: grid;
+    gap: 1rem;
+    align-content: flex-start;
+    font-family: 'Dosis', sans-serif;
+    min-height: 90vh;
+  }
+  
+.aside header{
+  display: grid;
+  /* justify-content: center; */
+  gap: 0.3rem;
+  color: white;
+}
+
+.aside header>h2{
+  justify-self: center;
+}
+
+.noteDet{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-inline: 0.8rem;
+}
+
+.aside header button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #019e01;
+    word-spacing: -0.17em;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.aside button:hover{
+    scale: 1.05;
+    transition: all 0.5s ease;
+}
+
+.notesList{
+    display: grid;
+}
+
+.notesList>:first-child{
+  border-top: 1px solid rgba(72, 72, 72, 0.411);
+}
+
+.noteCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(72, 72, 72, 0.411);
+}
+
+.noteCard>:first-child{
+  width: 95%;
+}
+
+.noteCard>*{
+  padding-block: 0.5rem;
+}
+
+.active{
+    background-color: #018001;
+}
+
+.noteCard:hover:not(.active){
+    background-color: #1b263b54;
+}
+
+.lastModified{
+    font-size: 11px;
+}
+
+.rightContainer{
+  display: grid;
+  position: relative;
+}
+
+.right{
+  display: grid;
+  gap: 0.2rem;
+}
+
+
+.right div{
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.dropDown{
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.885);
+  font-size: 14px;
+}
+
+.dropDown>*{
+  padding: 0.4rem;
+}
+
+.dropDown>*:hover{
+  background-color: #1b263b;
+}
+
+
+.right:hover>*:not(.dropDown){
+  background-color: rgb(47, 255, 102);
+}
+
+.main{
+    border-radius: 5px;
+    background-color: white;
+    padding: 0.2rem;
+    position: relative;
+}
+
+.mainWrap{
+  display: grid;
+  padding: 1rem;
+}
+
+.titleInput{
+  font-size: 26px;
+  text-indent: 10px;
+  padding-block: 0.6rem;
+  border: 1px solid rgba(128, 128, 128, 0.403);
+  border-radius: 3px;
+}
+
+.CodeMirror{
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
+}
+
+.editor-statusbar{
+  display: none;
+}
+
+.noNotes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(96, 95, 95);
+}
+
+.mainWrap{
+    display: grid;
+    gap: 10%;
+}
+
+
